@@ -37,7 +37,34 @@ class QuoteController extends Controller{
       return response()->json(['message'=>'deleted'] , 200);
    }
 
+
+
+   public function getQuotesVue(){
+      $quotes = Quote::orderBy('created_at' , 'desc')->paginate(3);
+      $response = $quotes;
+      return response()->json($response , 200);    
+   }
+
+   public function postQuoteVue(Request $request){
+      $quote = new Quote();
+      $quote->content = $request->content;
+      $quote->save();
+      return response()->json(['quote'=>$quote] , 201);
+   }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

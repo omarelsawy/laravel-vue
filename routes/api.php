@@ -40,6 +40,15 @@ Route::post('/user/signIn' , [
 
 
 
+Route::get('/quotesVue' , [
+  'uses' => 'QuoteController@getQuotesVue'
+]);
+
+Route::post('/quoteVue' , [
+  'uses' => 'QuoteController@postQuoteVue'
+]);
+
+
 
 
 
