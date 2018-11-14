@@ -14,3 +14,25 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Repository Design pattern
+Route::get('/RDP', 'QuoteRBDController@index');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
